@@ -15,7 +15,7 @@ DBMS Technologies: Not yet identified, most likely MySQL
 
 Complete ER Diagram
 
-<img src = 2019-02-18 (2).png title = 'ERDiagram' />
+<img src = ERDiagram.png title = 'ERDiagram' />
 
 
 Estudiante(numero, nombre, apellido1, apellido2, cinta, edad,  escuela, codigo_participacion)
