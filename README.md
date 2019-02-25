@@ -9,19 +9,19 @@ Concept:
 
 
 ### Selected Development Frameworks:
-Client-Side framework: Not yet identified
-Application Server Framework: Play Framework with Java
-DBMS Technologies: Not yet identified, most likely MySQL
++ Client-Side framework: Not yet identified
++ Application Server Framework: Play Framework with Java
++ DBMS Technologies: MySQL
 
 ### Complete ER Diagram
 
 <img src = ERDiagram.png title = 'ERDiagram' />
 
 
-Estudiante(numero, nombre, apellido1, apellido2, cinta, edad,  escuela, codigo_participacion)
-Escuela(nombre,disciplina, instructor_principal, pueblo, cantidad_estudiantes)
-Participacion(codigo_participacion, kumite, kata, armas, rompimiento)
-Cantidad_estudiantes(numero, nombre_estudiante)
++ Estudiante(numero, nombre, apellido1, apellido2, cinta, edad,  escuela, codigo_participacion)
++ Escuela(nombre,disciplina, instructor_principal, pueblo, cantidad_estudiantes)
++ Participacion(codigo_participacion, kumite, kata, armas, rompimiento)
++ Cantidad_estudiantes(numero, nombre_estudiante)
 
 //numero in Estudiente will be the primary key
 //nombre and disciplina will be the primary key to Escuela
@@ -31,20 +31,20 @@ Cantidad_estudiantes(numero, nombre_estudiante)
 //Participacion is being used to store the different ways a student can participate in a tournament 
 
 ### Requirements Definition Document - Description of each operation supported by the app
-The application will be mainly used to store information and display information. The application was created to easily obtain information from the participating student and school, and use it to score properly according to size. The most important tables on information is Estudiante and Escuela. 
-Estudiante will store information of each competitor. It must be connected to Escuela for further analysis at the end of the tournament. Since every student can opt in and out of specific competitions, the table for Participacion was created to less inflate the table Estudiante. It is necessary to know which student is participating in what of the tournament to tally up scores once the tournament is finished. It is also important to know how many student are per school so that when the score is tallies up, can be divided by the amount of student to know the average grade per school.
-Requirements inside the application:
-2 Entries, Escuela and Estudiante
-Participation keys must already exist before registering any competitor
-If registering school, must enter NAME, STYLE, PRIMARY INSTRUCTOR, and CITY
-A later, a table must be created to store how many students are per school
-If registering student, must enter NAME, LASTNAMES, BELT, AGE, and SCHOOL
-The student must then say what he/she in going to participate, and assigned a participation code that will be later used for assignment
-At end of registering, every table can be searched through keys
-Call Estudiante, shows all competitors
-Call Escuela, show all schools
-Call Participacion, show all the participation codes
-Estudiante and Cantidad_escuela must be updateable, should a more students come or drop out tournaments.
++ The application will be mainly used to store information and display information. The application was created to easily obtain information from the participating student and school, and use it to score properly according to size. The most important tables on information is Estudiante and Escuela. 
++ Estudiante will store information of each competitor. It must be connected to Escuela for further analysis at the end of the tournament. Since every student can opt in and out of specific competitions, the table for Participacion was created to less inflate the table Estudiante. It is necessary to know which student is participating in what of the tournament to tally up scores once the tournament is finished. It is also important to know how many student are per school so that when the score is tallies up, can be divided by the amount of student to know the average grade per school.
+#### Requirements inside the application:
++ 2 Entries, Escuela and Estudiante
++ Participation keys must already exist before registering any competitor
++ If registering school, must enter NAME, STYLE, PRIMARY INSTRUCTOR, and CITY
++ later, a table must be created to store how many students are per school
++ If registering student, must enter NAME, LASTNAMES, BELT, AGE, and SCHOOL
++ The student must then say what he/she in going to participate, and assigned a participation code that will be later used for assignment
++ At end of registering, every table can be searched through keys
++ Call Estudiante, shows all competitors
++ Call Escuela, show all schools
++ Call Participacion, show all the participation codes
++ Estudiante and Cantidad_escuela must be updateable, should a more students come or drop out tournaments.
 
 
 
