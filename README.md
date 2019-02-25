@@ -8,12 +8,12 @@ Concept:
 	A web app used to record entries in a karate tournament. This web app will save the names of the competitors and be able to sort for when the tournament start, all the appropriate informacion of the competitors can be searched easily.
 
 
- Selected Development Frameworks:
+### Selected Development Frameworks:
 Client-Side framework: Not yet identified
 Application Server Framework: Play Framework with Java
 DBMS Technologies: Not yet identified, most likely MySQL
 
-Complete ER Diagram
+### Complete ER Diagram
 
 <img src = ERDiagram.png title = 'ERDiagram' />
 
@@ -30,7 +30,7 @@ Cantidad_estudiantes(numero, nombre_estudiante)
 //cantidad_estudiante is being called to Escuela to register the amount of students per school
 //Participacion is being used to store the different ways a student can participate in a tournament 
 
-Requirements Definition Document - Description of each operation supported by the app
+### Requirements Definition Document - Description of each operation supported by the app
 The application will be mainly used to store information and display information. The application was created to easily obtain information from the participating student and school, and use it to score properly according to size. The most important tables on information is Estudiante and Escuela. 
 Estudiante will store information of each competitor. It must be connected to Escuela for further analysis at the end of the tournament. Since every student can opt in and out of specific competitions, the table for Participacion was created to less inflate the table Estudiante. It is necessary to know which student is participating in what of the tournament to tally up scores once the tournament is finished. It is also important to know how many student are per school so that when the score is tallies up, can be divided by the amount of student to know the average grade per school.
 Requirements inside the application:
