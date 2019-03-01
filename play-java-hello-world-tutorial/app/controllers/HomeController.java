@@ -27,7 +27,14 @@ public class HomeController extends Controller {
     }
 
     public Result hello() {
-    return ok(views.html.hello.render());      
+        return ok(views.html.hello.render());      
     }
 
+    public Result participacion() {
+        return ok(views.html.organizador.participacion.render());      
+    }
+
+    public Result about() {
+        return ok(views.html.about.render());      
+    }
 }
