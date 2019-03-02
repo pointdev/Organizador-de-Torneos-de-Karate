@@ -1,5 +1,6 @@
 package models;
 import java.util.Set;
+import java.util.HashSet;
 
 //Estudiante(numero, nombre, apellido1, apellido2, cinta, edad, escuela, codigo_participacion)
 
@@ -24,12 +25,12 @@ public class Estudiante  {
     //used temporary template to store estudiante
     private static Set<Estudiante> estudiantes;
     static{
-        estudiantes = new Hashset<>();
-        Estudiantes.add(new estudiante(1, juan, crespo, villanueva, roja, 21, hawaiankenpo, 1001));
-        Estudiantes.add(new estudiante(2, annamary, cartagena, velez, azul, 21, mortalkombat, 0101));
+        estudiantes = new HashSet<>();
+        estudiantes.add(new Estudiante(1, juan, crespo, villanueva, roja, 21, hawaiankenpo, 1001));
+        estudiantes.add(new Estudiante(2, annamary, cartagena, velez, azul, 21, mortalkombat, 0101));
 
     }
-    public static Set<Estudiante> AllEstudiantes(){ //enseñar todas las estudiantes
+    public static Set<Estudiante> allEstudiantes(){ //enseñar todas las estudiantes
         return estudiantes;
     }
     public static Estudiante findById(Integer id){ //buscar estudiantes por id

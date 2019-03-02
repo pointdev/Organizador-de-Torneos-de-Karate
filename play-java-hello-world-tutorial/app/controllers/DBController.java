@@ -8,6 +8,9 @@ import play.data.Form;
 import play.data.FormFactory;
 import models.*;
 import javax.inject.Inject;
+import java.lang.*;
+
+import org.omg.CosNaming.NamingContextPackage.NotFound;
 
 
 public class DBController extends Controller {
@@ -36,7 +39,12 @@ public class DBController extends Controller {
 
     //editar una escuela
     public Result editEscuela(Integer id){
-        return TODO;
+        Escuela escuela = Escuela.findById(id);
+        if(escuela == null){
+            return notFound("Escuela no encontrado");
+        }
+        Form<Escuela> escuelaForm = formFactory.form(Escuela.class).fill(escuela);
+        return ok(editEscuela.render(escuelaForm));
     }
 
     //update database
@@ -78,7 +86,12 @@ public class DBController extends Controller {
 
     //editar un estudiante
     public Result editEstudiante(Integer id){
-        return TODO;
+        Estudiante estudiante = Estudiante.findById(id);
+        if(estudiante == null){
+            return notFound("Escuela no encontrado");
+        }
+        Form<Estudiante> estudianteForm = formFactory.form(Estudiante.class).fill(estudiante);
+        return ok(editEstudiante.render(estudianteForm));
     }
 
     //update database

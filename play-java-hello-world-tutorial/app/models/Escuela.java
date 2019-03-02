@@ -1,5 +1,6 @@
 package models;
 import java.util.Set;
+import java.util.HashSet;
 
 //Escuela(nombre,disciplina, instructor_principal, pueblo, cantidad_estudiantes)
 
@@ -20,9 +21,9 @@ public class Escuela  {
     //used temporary template to store escuela
     private static Set<Escuela> escuelas;
     static{
-        escuelas = new Hashset<>();
-        Escuelas.add(new escuela(1, nombredeescula, hawaiankenpo, senseiwillie, mayaguez));
-        Escuelas.add(new escuela(2, nombredeescula2, haiku, mortalkombat, japan));
+        escuelas = new HashSet<>();
+        escuelas.add(new Escuela(1, nombredeescula, hawaiankenpo, senseiwillie, mayaguez));
+        escuelas.add(new Escuela(2, nombredeescula2, haiku, mortalkombat, japan));
 
     }
     public static Set<Escuela> allEscuelas(){ //enseñar todas las escuelas
