@@ -8,7 +8,11 @@ import play.data.Form;
 import play.data.FormFactory;
 import models.*;
 import javax.inject.Inject;
+
+import com.sun.org.apache.regexp.internal.recompile;
+
 import java.lang.*;
+import java.lang.ProcessBuilder.Redirect;
 
 import org.omg.CosNaming.NamingContextPackage.NotFound;
 
@@ -49,7 +53,18 @@ public class DBController extends Controller {
 
     //update database
     public Result updateEscuela(){
-        return TODO;
+        Form<Escuela> escuelaForm = formFactory.form(Escuela.class).bindFromRequest();
+        Escuela escuela = escuelaForm.get();
+        Escuela oldEscuela = Escuela.findById(escuela.id);
+        if(oldEscuela == null){
+            return notFound("Escuela no encontrado");
+        }
+        oldEscuela.instructorPrincipal = escuela.instructorPrincipal;
+        oldEscuela.name = escuela.name;
+        oldEscuela.pueblo = escuela.pueblo;
+        oldEscuela.disciplina = escuela.disciplina;
+        
+        return redirect(routes.DBController.indexEscuela());
     }
 
     //destroy database
@@ -88,7 +103,7 @@ public class DBController extends Controller {
     public Result editEstudiante(Integer id){
         Estudiante estudiante = Estudiante.findById(id);
         if(estudiante == null){
-            return notFound("Escuela no encontrado");
+            return notFound("Estudiante no encontrado");
         }
         Form<Estudiante> estudianteForm = formFactory.form(Estudiante.class).fill(estudiante);
         return ok(editEstudiante.render(estudianteForm));
@@ -96,7 +111,22 @@ public class DBController extends Controller {
 
     //update database
     public Result updateEstudiante(){
-        return TODO;
+        Form<Estudiantea> estudianteForm = formFactory.form(Estudianteclass).bindFromRequest();
+        Estudiante estudiante = estudianteForm.get();
+        Estudiante oldEstudiante = Estudiante.findById(estudiante.id);
+        if(oldEstudiante == null){
+            return notFound("Estudiante no encontrado");
+        }
+        
+        oldEstudiante.fname = escuela.fname;
+        oldEstudiante.lname = escuela.lname;
+        oldEstudiante.lname2 = escuela.lname2;
+        oldEstudiante.cinta = escuela.cinta;
+        oldEstudiante.edad = escuela.edad;
+        oldEstudiante.escuela = escuela.escuela;
+        oldEstudiante.codigoParticipacion = escuela.codigoParticipacion;
+
+        return redirect(routes.DBController.indexEstudiante());
     }
 
     //destroy estudiante
