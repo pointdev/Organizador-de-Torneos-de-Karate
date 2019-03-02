@@ -28,7 +28,10 @@ public class DBController extends Controller {
 
     //guardar una escuela
     public Result saveEscuela(){
-        return TODO;
+        Form<Escuela> escuelaForm = formFactory.form(Escuela.class).bindFromRequest();
+        Escuela escuela = escuelaForm.get();
+        Escuela.add(escuela);
+        return redirect(routes.DBController.indexEscuela());
     }
 
     //editar una escuela
@@ -67,7 +70,10 @@ public class DBController extends Controller {
 
     //guardar un estudiante
     public Result saveEstudiante(){
-        return TODO;
+        Form<Estudiante> estudianteForm = formFactory.form(Estudiante.class).bindFromRequest();
+        Estudiante estudiante = estudianteForm.get();
+        Estudiante.add(estudiante);
+        return redirect(routes.DBController.indexEstudiante());
     }
 
     //editar un estudiante
