@@ -8,6 +8,8 @@ public class Estudiante  {
     public String fname, lname, lname2, cinta, escuela;
     public Integer edad, codigoParticipacion;
 
+    public Estudiante(){} //default constructor
+
     public Estudiante(Integer id, String fname, String lname, String lname2, String cinta, Integer edad, String escuela, Integer codigoParticipacion){
         this.id = id;
         this.fname = fname;

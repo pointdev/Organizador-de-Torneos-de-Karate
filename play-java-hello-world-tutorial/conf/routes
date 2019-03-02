@@ -10,7 +10,7 @@ GET    /hello                       controllers.HomeController.hello
 GET     /participacion              controllers.HomeController.participacion
 GET     /about                      controllers.HomeController.about
 
-GET     /estudiantes                controllers.HomeController.estudiantes
+GET     /estudiantes                controllers.DBController.indexEstudiante()
 GET     /estudiantes/create         controllers.DBController.createEstudiante
 GET     /estudiantes/:id            controllers.DBController.showEstudiante(id : Integer)
 GET     /estudiantes/edit/:id       controllers.DBController.editEstudiante(id : Integer)

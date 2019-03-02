@@ -7,6 +7,8 @@ public class Escuela  {
     public Integer id;
     public String name, disciplina, instructorPrincipal, pueblo;
 
+    public Escuela(){} //default contructor
+
     public Escuela(Integer id, String name, String disciplina, String instructorPrincipal, String pueblo){
         this.id = id;
         this.name = name;

@@ -7,9 +7,13 @@ import java.util.Set;
 import play.data.Form;
 import play.data.FormFactory;
 import models.*;
+import javax.inject.Inject;
 
 
 public class DBController extends Controller {
+    @Inject
+    FormFactory formFactory;
+
 
     //showing escuela al usuario 
     public Result indexEscuela(){
@@ -18,7 +22,8 @@ public class DBController extends Controller {
     }
     //crear una Escuela
     public Result createEscuela(){
-        return TODO;
+        Form<Escuela> escuelaForm =  formFactory.form(Escuela.class);
+        return ok(createEscuela.render(escuelaForm));
         }
 
     //guardar una escuela
@@ -48,9 +53,16 @@ public class DBController extends Controller {
 
     //==============================================================================
 
+    //showing estudiante al usuario 
+    public Result indexEstudiante(){
+        Set<Estudiante> estudiantes = Estudiante.allEstudiantes();
+        return ok(indexEstudiante.render(estudiantes));
+    }
+
     //crear un estudiante
     public Result createEstudiante(){
-        return TODO;
+        Form<Estudiante> estudianteForm =  formFactory.form(Estudiante.class);
+        return ok(createEstudiante.render(estudianteForm));
     }
 
     //guardar un estudiante

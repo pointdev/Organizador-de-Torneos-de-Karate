@@ -1,0 +1,18 @@
+@(estudiantes : Set[Estudiante])
+
+
+<html>
+  <head>
+    <title>Todos los estudiantes</title>
+  </head>
+  <body>
+    <h1> estudiantes</h1>
+
+    @for(estudiante <- estudiantes){
+      <a href="#">@estudiante.fname</a>
+      <p>Cinta : @estudiante.cinta </p>
+      <p>Edad : @estudiante.edad</p>
+      <p>Codigo Participacion : @estudiante.codigoParticipacion</p>
+    }
+  </body>
+</html>
