@@ -17,4 +17,6 @@ public class estudiante  {
         this.escuela = escuela;
         this.codigoParticipacion = codigoParticipacion;
     }
+
+    //used temporary template to store estudiante
 }
