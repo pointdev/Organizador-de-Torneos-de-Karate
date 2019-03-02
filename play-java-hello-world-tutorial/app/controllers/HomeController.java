@@ -34,6 +34,14 @@ public class HomeController extends Controller {
         return ok(views.html.organizador.participacion.render());      
     }
 
+    public Result estudiantes() {
+        return ok(views.html.organizador.showEstudiante.render());      
+    }
+
+    public Result escuela() {
+        return ok(views.html.organizador.showEstudiante.render());      
+    }
+
     public Result about() {
         return ok(views.html.about.render());      
     }
