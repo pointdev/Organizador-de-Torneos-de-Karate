@@ -18,7 +18,7 @@ POST    /estudiantes/edit           controllers.DBController.updateEstudiante
 POST    /estudiantes/create         controllers.DBController.saveEstudiante
 GET     /estudiantes/delete/:id     controllers.DBController.destroyEstudiante(id : Integer)
 
-GET     /escuela                	controllers.HomeController.escuela
+GET     /escuela                	controllers.DBController.indexEscuela()
 GET     /escuela/create             controllers.DBController.createEscuela
 GET     /escuela/:id                controllers.DBController.showEscuela(id : Integer)
 GET     /escuela/edit/:id           controllers.DBController.editEscuela(id : Integer)

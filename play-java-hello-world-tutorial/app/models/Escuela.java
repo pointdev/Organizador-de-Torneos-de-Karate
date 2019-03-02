@@ -20,7 +20,7 @@ public class Escuela  {
     static{
         escuelas = new Hashset<>();
         escuelas.add(new escuela(1, nombredeescula, hawaiankenpo, senseiwillie, mayaguez));
-        books.add(new escuela(2, nombredeescula2, haiku, mortalkombat, japan));
+        escuelas.add(new escuela(2, nombredeescula2, haiku, mortalkombat, japan));
 
     }
     public static Set<Escuela> allEscuelas(){ //enseñar todas las escuelas
@@ -37,7 +37,8 @@ public class Escuela  {
     public static void add(Escuela escuela){
         escuela.add(escuela);
     }
-
-
+    public static boolean remove(Escuela escuela){
+        return escuela.remove(escuela);
+    }
 
 }
