@@ -1,0 +1,27 @@
+@(estudianteForm : Form[Estudiante])
+@import helper._
+
+<html>
+  <head>
+    <title>Anadiendo un Estudiante</title>
+  </head>
+  <body>
+    <h1>Estudiante</h1>
+
+    @helper.form(action =  routes.DBController.saveEstudiante()){
+      @helper.inputText(estudianteForm("id"))
+      @helper.inputText(estudianteForm("fname"))
+      @helper.inputText(estudianteForm("lname"))
+      @helper.inputText(estudianteForm("lname2"))
+      @helper.inputText(estudianteForm("cinta"))
+      @helper.inputText(estudianteForm("edad"))
+      @helper.inputText(estudianteForm("escuela"))
+      @helper.inputText(estudianteForm("codigoParticipacion"))
+
+      <input type= "submit" value="crear Estudiante">
+
+    }
+
+
+  </body>
+</html>

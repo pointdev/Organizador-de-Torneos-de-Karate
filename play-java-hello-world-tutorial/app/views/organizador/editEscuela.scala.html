@@ -1,0 +1,24 @@
+@(escuelaForm : Form[Escuela])
+@import helper._
+
+<html>
+  <head>
+    <title>Editando una Escuela</title>
+  </head>
+  <body>
+    <h1>Escuela</h1>
+
+    @helper.form(action =  routes.DBController.updateEscuela()){
+      @helper.inputText(escuelaForm("id"))
+      @helper.inputText(escuelaForm("name"))
+      @helper.inputText(escuelaForm("disciplina"))
+      @helper.inputText(escuelaForm("instructorPrincipal"))
+      @helper.inputText(escuelaForm("pueblo"))
+
+      <input type= "submit" value="editar escuela">
+
+    }
+
+
+  </body>
+</html>

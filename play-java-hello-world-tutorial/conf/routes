@@ -10,6 +10,21 @@ GET    /hello                       controllers.HomeController.hello
 GET     /participacion              controllers.HomeController.participacion
 GET     /about                      controllers.HomeController.about
 
+GET     /estudiantes                controllers.DBController.indexEstudiante()
+GET     /estudiantes/create         controllers.DBController.createEstudiante
+GET     /estudiantes/:id            controllers.DBController.showEstudiante(id : Integer)
+GET     /estudiantes/edit/:id       controllers.DBController.editEstudiante(id : Integer)
+POST    /estudiantes/edit           controllers.DBController.updateEstudiante
+POST    /estudiantes/create         controllers.DBController.saveEstudiante
+GET     /estudiantes/delete/:id     controllers.DBController.deleteEstudiante(id : Integer)
+
+GET     /escuela                	controllers.DBController.indexEscuela()
+GET     /escuela/create             controllers.DBController.createEscuela
+GET     /escuela/:id                controllers.DBController.showEscuela(id : Integer)
+GET     /escuela/edit/:id           controllers.DBController.editEscuela(id : Integer)
+POST    /escuela/edit               controllers.DBController.updateEscuela
+POST    /escuela/create             controllers.DBController.saveEscuela
+GET     /escuela/delete/:id         controllers.DBController.deleteEscuela(id : Integer)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

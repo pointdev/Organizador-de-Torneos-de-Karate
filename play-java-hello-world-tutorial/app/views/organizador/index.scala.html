@@ -1,0 +1,18 @@
+@(escuelas : Set[Escuela])
+
+
+<html>
+  <head>
+    <title>Todas las Escuelas</title>
+  </head>
+  <body>
+    <h1> Escuelas</h1>
+
+    @for(escuela <- escuelas){
+      <a href="#">@escuela.name</a>
+      <p>Disciplina : @escuela.disciplina </p>
+      <p>Instructor Principal : @escuela.instructorPrincipal</p>
+      <p>Pueblo : @escuela.pueblo</p>
+    }
+  </body>
+</html>

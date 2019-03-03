@@ -1,0 +1,19 @@
+@(estudiante : Estudiante)
+@import helper._
+
+<html>
+  <head>
+    <title>Ensenando @estudiante.fname</title>
+  </head>
+  <body>
+    <h2>@estudiante.fname</h2>
+    <p>@estudiante.lname</p>
+    <p>@estudiante.lname2</p>
+    <p>Cinta : @estudiante.cinta </p>
+    <p>Edad : @estudiante.edad</p>
+    <p>Codigo Participacion : @estudiante.codigoParticipacion</p>
+
+    <a href = "@routes.DBController.editEstudiante(estudiante.id)">Editar</a>
+    <a href = "@routes.DBController.deleteEstudiante(estudiante.id)>">Eliminar</a>
+  </body>
+</html>
