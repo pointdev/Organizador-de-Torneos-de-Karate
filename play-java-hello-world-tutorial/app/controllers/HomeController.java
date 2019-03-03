@@ -1,6 +1,7 @@
 package controllers;
 
 import play.mvc.*;
+import models.*;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -34,13 +35,13 @@ public class HomeController extends Controller {
         return ok(views.html.organizador.participacion.render());      
     }
 
-    public Result estudiantes() {
-        return ok(views.html.organizador.showEstudiante.render());      
-    }
+    // public Result estudiante() {
+    //     return ok(views.html.organizador.showEstudiante.render());      
+    // }
 
-    public Result escuela() {
-        return ok(views.html.organizador.showEstudiante.render());      
-    }
+    // public Result escuela() {
+    //     return ok(views.html.organizador.showEscuela.render());      
+    // }
 
     public Result about() {
         return ok(views.html.about.render());      

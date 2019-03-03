@@ -9,7 +9,7 @@
     <h1> Escuelas</h1>
 
     @for(escuela <- escuelas){
-      <a href="#">@escuela.name</a>
+      <a href="@routes.DBController.showEscuela(escuela.id)">@escuela.name</a>
       <p>Disciplina : @escuela.disciplina </p>
       <p>Instructor Principal : @escuela.instructorPrincipal</p>
       <p>Pueblo : @escuela.pueblo</p>

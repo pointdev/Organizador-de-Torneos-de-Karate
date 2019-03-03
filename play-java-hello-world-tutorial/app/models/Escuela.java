@@ -22,8 +22,8 @@ public class Escuela  {
     private static Set<Escuela> escuelas;
     static{
         escuelas = new HashSet<>();
-        escuelas.add(new Escuela(1, nombredeescula, hawaiankenpo, senseiwillie, mayaguez));
-        escuelas.add(new Escuela(2, nombredeescula2, haiku, mortalkombat, japan));
+        escuelas.add(new Escuela(1, "nombredeescula", "hawaiankenpo", "senseiwillie", "mayaguez"));
+        escuelas.add(new Escuela(2, "nombredeescula2", "haiku", "mortalkombat", "japan"));
 
     }
     public static Set<Escuela> allEscuelas(){ //enseñar todas las escuelas

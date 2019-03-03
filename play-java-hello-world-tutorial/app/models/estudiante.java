@@ -26,8 +26,8 @@ public class Estudiante  {
     private static Set<Estudiante> estudiantes;
     static{
         estudiantes = new HashSet<>();
-        estudiantes.add(new Estudiante(1, juan, crespo, villanueva, roja, 21, hawaiankenpo, 1001));
-        estudiantes.add(new Estudiante(2, annamary, cartagena, velez, azul, 21, mortalkombat, 0101));
+        estudiantes.add(new Estudiante(1, "juan", "crespo", "villanueva", "roja", 21, "hawaiankenpo", 2));
+        estudiantes.add(new Estudiante(2, "annamary", "cartagena", "velez", "azul", 21, "mortalkombat", 1));
 
     }
     public static Set<Estudiante> allEstudiantes(){ //enseñar todas las estudiantes

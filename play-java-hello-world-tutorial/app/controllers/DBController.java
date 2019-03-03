@@ -67,15 +67,27 @@ public class DBController extends Controller {
         return redirect(routes.DBController.indexEscuela());
     }
 
-    //destroy database
-    public Result destroyEscuela(Integer id){
-        return TODO;
-    }
-
     //enseñar database
     public Result showEscuela(Integer id){
-        return TODO;
+        Escuela escuela = Escuela.findById(id);
+        if(escuela == null){
+            return notFound("Escuela no encontrado");
+        }
+        return ok(showEscuela.render(escuela));
     }
+
+    //destroy database
+    public Result deleteEscuela(Integer id){
+        Escuela escuela = Escuela.findById(id);
+        if(escuela == null){
+            return notFound("Escuela no encontrado");
+        }
+        Escuela.remove(escuela);
+
+        return redirect(routes.DBController.indexEscuela());
+    }
+
+
 
     //==============================================================================
 
@@ -111,32 +123,41 @@ public class DBController extends Controller {
 
     //update database
     public Result updateEstudiante(){
-        Form<Estudiantea> estudianteForm = formFactory.form(Estudianteclass).bindFromRequest();
+        Form<Estudiante> estudianteForm = formFactory.form(Estudiante.class).bindFromRequest();
         Estudiante estudiante = estudianteForm.get();
         Estudiante oldEstudiante = Estudiante.findById(estudiante.id);
         if(oldEstudiante == null){
             return notFound("Estudiante no encontrado");
         }
         
-        oldEstudiante.fname = escuela.fname;
-        oldEstudiante.lname = escuela.lname;
-        oldEstudiante.lname2 = escuela.lname2;
-        oldEstudiante.cinta = escuela.cinta;
-        oldEstudiante.edad = escuela.edad;
-        oldEstudiante.escuela = escuela.escuela;
-        oldEstudiante.codigoParticipacion = escuela.codigoParticipacion;
+        oldEstudiante.fname = estudiante.fname;
+        oldEstudiante.lname = estudiante.lname;
+        oldEstudiante.lname2 = estudiante.lname2;
+        oldEstudiante.cinta = estudiante.cinta;
+        oldEstudiante.edad = estudiante.edad;
+        oldEstudiante.escuela = estudiante.escuela;
+        oldEstudiante.codigoParticipacion = estudiante.codigoParticipacion;
 
         return redirect(routes.DBController.indexEstudiante());
     }
 
-    //destroy estudiante
-    public Result destroyEstudiante(Integer id){
-        return TODO;
-    }
-
     //enseñar estudiante
     public Result showEstudiante(Integer id){
-        return TODO;
+        Estudiante estudiante = Estudiante.findById(id);
+        if(estudiante == null){
+            return notFound("Estudiante no encontrado");
+        }
+        return ok(showEstudiante.render(estudiante));
     }
 
+    //destroy estudiante
+    public Result deleteEstudiante(Integer id){
+        Estudiante estudiante = Estudiante.findById(id);
+        if(estudiante == null){
+            return notFound("Estudiante no encontrado");
+        }
+        Estudiante.remove(estudiante);
+
+        return redirect(routes.DBController.indexEstudiante());
+    }
 }
