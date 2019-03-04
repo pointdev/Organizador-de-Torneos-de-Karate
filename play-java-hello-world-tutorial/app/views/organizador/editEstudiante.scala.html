@@ -1,27 +1,18 @@
 @(estudianteForm : Form[Estudiante])
 @import helper._
+@layout("Editando un Estudiante"){
+  <h1>Estudiante</h1>
 
-<html>
-  <head>
-    <title>Editando un Estudiante</title>
-  </head>
-  <body>
-    <h1>Estudiante</h1>
+  @helper.form(action =  routes.DBController.updateEstudiante()){
+    @helper.inputText(estudianteForm("id"))
+    @helper.inputText(estudianteForm("fname"))
+    @helper.inputText(estudianteForm("lname"))
+    @helper.inputText(estudianteForm("lname2"))
+    @helper.inputText(estudianteForm("cinta"))
+    @helper.inputText(estudianteForm("edad"))
+    @helper.inputText(estudianteForm("escuela"))
+    @helper.inputText(estudianteForm("codigoParticipacion"))
 
-    @helper.form(action =  routes.DBController.updateEstudiante()){
-      @helper.inputText(estudianteForm("id"))
-      @helper.inputText(estudianteForm("fname"))
-      @helper.inputText(estudianteForm("lname"))
-      @helper.inputText(estudianteForm("lname2"))
-      @helper.inputText(estudianteForm("cinta"))
-      @helper.inputText(estudianteForm("edad"))
-      @helper.inputText(estudianteForm("escuela"))
-      @helper.inputText(estudianteForm("codigoParticipacion"))
-
-      <input type= "submit" value="editar Estudiante">
-
-    }
-
-
-  </body>
-</html>
+    <input type= "submit" value="editar Estudiante">
+  }
+}

@@ -1,24 +1,16 @@
 @(escuelaForm : Form[Escuela])
 @import helper._
+@layout("Anadiendo una Escuela"){
+  <h1>Escuela</h1>
 
-<html>
-  <head>
-    <title>Anadiendo una Escuela</title>
-  </head>
-  <body>
-    <h1>Escuela</h1>
+  @helper.form(action =  routes.DBController.saveEscuela()){
+    @helper.inputText(escuelaForm("id"))
+    @helper.inputText(escuelaForm("name"))
+    @helper.inputText(escuelaForm("disciplina"))
+    @helper.inputText(escuelaForm("instructorPrincipal"))
+    @helper.inputText(escuelaForm("pueblo"))
 
-    @helper.form(action =  routes.DBController.saveEscuela()){
-      @helper.inputText(escuelaForm("id"))
-      @helper.inputText(escuelaForm("name"))
-      @helper.inputText(escuelaForm("disciplina"))
-      @helper.inputText(escuelaForm("instructorPrincipal"))
-      @helper.inputText(escuelaForm("pueblo"))
+    <input type= "submit" value="crear escuela">
 
-      <input type= "submit" value="crear escuela">
-
-    }
-
-
-  </body>
-</html>
+  }
+}

@@ -1,18 +1,12 @@
 @(escuela : Escuela)
 @import helper._
+@layout("Ensenando @escuela.name"){
+  <h2>@escuela.name</h2>
+  <p>Disciplina : @escuela.disciplina</p>
+  <p>InstructorPrincipal : @escuela.instructorPrincipal</p>
+  <p>Pueblo : @escuela.pueblo</p>
 
-<html>
-  <head>
-    <title>Ensenando @escuela.name</title>
-  </head>
-  <body>
-    <h2>@escuela.name</h2>
-    <p>Disciplina : @escuela.disciplina</p>
-    <p>InstructorPrincipal : @escuela.instructorPrincipal</p>
-    <p>Pueblo : @escuela.pueblo</p>
+  <a href = "@routes.DBController.editEscuela(escuela.id)">Editar</a>
+  <a href = "@routes.DBController.deleteEscuela(escuela.id)">Eliminar</a>
 
-    <a href = "@routes.DBController.editEscuela(escuela.id)">Editar</a>
-    <a href = "@routes.DBController.deleteEscuela(escuela.id)">Eliminar</a>
-
-  </body>
-</html>
+}

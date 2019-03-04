@@ -1,12 +1,6 @@
 @(escuelas : Set[Escuela])
-
-
-<html>
-  <head>
-    <title>Todas las Escuelas</title>
-  </head>
-  <body>
-    <h1> Escuelas</h1>
+@layout("Todas las Escuelas"){
+      <h1> Escuelas</h1>
 
     @for(escuela <- escuelas){
       <a href="@routes.DBController.showEscuela(escuela.id)">@escuela.name</a>
@@ -14,5 +8,6 @@
       <p>Instructor Principal : @escuela.instructorPrincipal</p>
       <p>Pueblo : @escuela.pueblo</p>
     }
-  </body>
-</html>
+
+    <a href="@routes.DBController.createEscuela()"> Crear una Escuela</a>
+}
