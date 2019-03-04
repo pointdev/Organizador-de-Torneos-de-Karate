@@ -50,20 +50,26 @@ Concept:
 
 ## Master Project Development Plan
 Sprint 1
-* [ ]  Generic, empty Tables have been made
-* [ ]  Can not be connected
-* [ ]  Participacion table has been finished with participation_codes created
-* [ ]  Web App must show the registration form
+* [X]  Generic, empty Tables have been made
+* [X]  Connect Database MySQL
+* [X] Functions for create, edit, and delete information
+* [X]  Web App must show the registration form
 May not be operational
+#### Comments
++ Only Escuela db table has been created
++ Registration form is currently ussing hashsets instead of db tables
++ Functions work with hashsets instead of db tables
 
 Sprint 2
+* [ ] Create remaining tables
+* [ ]  Participacion table has been finished with participation_codes created
 * [ ]  Generic registration form for Estudiante slightly Operational
 * [ ]  Generic registration form for Escuela slightly Operational
 * [ ]  Participation table connected to Estudiante Table
 
 ## Notes
 
-Folders Containing DOcumentation:
+Folders Containing Documentation:
 https://drive.google.com/open?id=1YdCnQzFtT31UswCvwbg2D5RJDb6oEL16
 
 Feb 15 2019:
