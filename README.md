@@ -65,7 +65,10 @@ Sprint 2
 * [ ]  Participacion table has been finished with participation_codes created
 * [ ]  Generic registration form for Estudiante slightly Operational
 * [ ]  Generic registration form for Escuela slightly Operational
+
+Sprint 3
 * [ ]  Participation table connected to Estudiante Table
+* [ ] Improve interface
 
 ## Notes
 
