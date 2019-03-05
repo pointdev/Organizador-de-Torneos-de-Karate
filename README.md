@@ -62,6 +62,9 @@ May not be operational
 
 Sprint 2
 * [ ] Create remaining tables
+* [ ] Activar servidor/tener applicacion en algun servidor
+* [ ] Modelo diagrama a tabla
+* [ ] Mockup webpage/ creation interface
 * [ ]  Participacion table has been finished with participation_codes created
 * [ ]  Generic registration form for Estudiante slightly Operational
 * [ ]  Generic registration form for Escuela slightly Operational
